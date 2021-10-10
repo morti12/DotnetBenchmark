@@ -9,16 +9,16 @@ public class OneOfExceptionBenchmark
     #region Exception
 
     [Benchmark]
-    public void ThrowsException()
+    public string ThrowsException()
     {
         try
         {
             var message = GetStringWithException();
-            Console.WriteLine(message);
+            return message;
         }
-        catch (Exception _)
+        catch (Exception e)
         {
-            ;
+            return e.Message;
         }
     }
 
@@ -32,11 +32,11 @@ public class OneOfExceptionBenchmark
     #region Record struct
 
     [Benchmark]
-    public void OneOfRecordStruct()
+    public string OneOfRecordStruct()
     {
-        GetOneOfRecordStructMessage().Switch(
-            success => Console.WriteLine(success.Message),
-            error => {; });
+        return GetOneOfRecordStructMessage().Match(
+            success => success.Message,
+            error => error.Message);
     }
 
     private static OneOf<SuccessMessageRecordStruct, ExceptionMessageRecordStruct> GetOneOfRecordStructMessage()
@@ -52,11 +52,11 @@ public class OneOfExceptionBenchmark
     #region Record Class
 
     [Benchmark]
-    public void OneOfRecordClass()
+    public string OneOfRecordClass()
     {
-        GetOneOfRecordClassMessage().Switch(
-            success => Console.WriteLine(success.Message),
-            error => {; });
+        return GetOneOfRecordClassMessage().Match(
+            success => success.Message,
+            error => error.Message);
     }
 
     private static OneOf<SuccessMessageRecordClass, ExceptionMessageRecordClass> GetOneOfRecordClassMessage()
@@ -72,11 +72,11 @@ public class OneOfExceptionBenchmark
     #region class
 
     [Benchmark]
-    public void OneOfClass()
+    public string OneOfClass()
     {
-        GetOneOfClassMessage().Switch(
-            success => Console.WriteLine(success.Message),
-            error => {; });
+        return GetOneOfClassMessage().Match(
+            success => success.Message,
+            error => error.Message);
     }
 
     private static OneOf<SuccessMessageClass, ExceptionMessageClass> GetOneOfClassMessage()
@@ -108,11 +108,11 @@ public class OneOfExceptionBenchmark
     #region struct
 
     [Benchmark]
-    public void OneOfStruct()
+    public string OneOfStruct()
     {
-        GetOneOfStructMessage().Switch(
-            success => Console.WriteLine(success.Message),
-            error => {; });
+        return GetOneOfStructMessage().Match(
+            success => success.Message,
+            error => error.Message);
     }
 
     private static OneOf<SuccessMessageStruct, ExceptionMessageStruct> GetOneOfStructMessage()

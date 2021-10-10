@@ -4,21 +4,25 @@
 public class ClassRecordStructRecord
 {
     [Benchmark]
-    public void ClassBenchmark()
+    public BenchmarkRecordClass ClassBenchmark()
     {
         var record = new BenchmarkRecordClass("Hello", "World", 42);
 
         record = record with { Name = "World", FamilyName = "Hello", Age = 4711 };
+
+        return record;
     }
 
     [Benchmark]
-    public void StructBenchmark()
+    public BenchmarkRecordStruct StructBenchmark()
     {
         var record = new BenchmarkRecordStruct("Hello", "World", 42);
 
         record = record with { Name = "World", FamilyName = "Hello", Age = 4711 };
+
+        return record;
     }
 
-    private record class BenchmarkRecordClass(string Name, string FamilyName, int Age);
-    private record struct BenchmarkRecordStruct(string Name, string FamilyName, int Age);
+    public record class BenchmarkRecordClass(string Name, string FamilyName, int Age);
+    public record struct BenchmarkRecordStruct(string Name, string FamilyName, int Age);
 }
