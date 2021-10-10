@@ -1,10 +1,9 @@
-﻿using ToListToArrayBenchmark;
-using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Running;
 
-namespace BenchmarkConsole
+namespace ToListToArrayBenchmark
 {
-    public class Program 
-    { 
+    public class Program
+    {
         public static void Main(string[] args)
         {
             BenchmarkRunner.Run<ToListVsToArray>();
