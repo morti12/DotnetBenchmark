@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OneOfExceptionBenchmark", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassRecordStructRecord", "ClassRecordStructRecord\ClassRecordStructRecord.csproj", "{844E2B10-3F1C-446B-8950-29516C2259E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmptyListArrayBenchmark", "EmptyListArrayBenchmark\EmptyListArrayBenchmark.csproj", "{794A0720-6EDF-409F-BB56-1334E00BE55A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmptyListArrayBenchmark", "EmptyListArrayBenchmark\EmptyListArrayBenchmark.csproj", "{794A0720-6EDF-409F-BB56-1334E00BE55A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexOfBenchmark", "IndexOfBenchmark\IndexOfBenchmark.csproj", "{0E899E77-506B-4A4C-94D1-04905E32E402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{794A0720-6EDF-409F-BB56-1334E00BE55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794A0720-6EDF-409F-BB56-1334E00BE55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794A0720-6EDF-409F-BB56-1334E00BE55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E899E77-506B-4A4C-94D1-04905E32E402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E899E77-506B-4A4C-94D1-04905E32E402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E899E77-506B-4A4C-94D1-04905E32E402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E899E77-506B-4A4C-94D1-04905E32E402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
