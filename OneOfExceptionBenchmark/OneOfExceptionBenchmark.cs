@@ -93,6 +93,7 @@ public class OneOfExceptionBenchmark
 
         public string Message { get; }
     }
+
     private class ExceptionMessageClass
     {
         public ExceptionMessageClass(string message)
@@ -129,6 +130,7 @@ public class OneOfExceptionBenchmark
 
         public string Message { get; }
     }
+
     private struct ExceptionMessageStruct
     {
         public ExceptionMessageStruct(string message)
