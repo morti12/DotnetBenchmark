@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmptyListArrayBenchmark", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndexOfBenchmark", "IndexOfBenchmark\IndexOfBenchmark.csproj", "{0E899E77-506B-4A4C-94D1-04905E32E402}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListVsImmutableList", "ListVsImmutableList\ListVsImmutableList.csproj", "{8D7085B2-C53A-45C4-95EA-67EE48F869C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListVsImmutableList", "ListVsImmutableList\ListVsImmutableList.csproj", "{8D7085B2-C53A-45C4-95EA-67EE48F869C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashComparision", "HashComparision\HashComparision.csproj", "{4335493B-E75C-4544-B311-973C818B5CD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{8D7085B2-C53A-45C4-95EA-67EE48F869C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D7085B2-C53A-45C4-95EA-67EE48F869C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D7085B2-C53A-45C4-95EA-67EE48F869C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4335493B-E75C-4544-B311-973C818B5CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4335493B-E75C-4544-B311-973C818B5CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4335493B-E75C-4544-B311-973C818B5CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4335493B-E75C-4544-B311-973C818B5CD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
