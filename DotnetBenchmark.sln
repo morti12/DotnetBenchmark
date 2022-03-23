@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListVsImmutableList", "List
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashComparision", "HashComparision\HashComparision.csproj", "{4335493B-E75C-4544-B311-973C818B5CD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullComparison", "NullComparison\NullComparison.csproj", "{603EB543-FDDC-44F8-A7BD-DFC104A1CDED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4335493B-E75C-4544-B311-973C818B5CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4335493B-E75C-4544-B311-973C818B5CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4335493B-E75C-4544-B311-973C818B5CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{603EB543-FDDC-44F8-A7BD-DFC104A1CDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{603EB543-FDDC-44F8-A7BD-DFC104A1CDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{603EB543-FDDC-44F8-A7BD-DFC104A1CDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{603EB543-FDDC-44F8-A7BD-DFC104A1CDED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
