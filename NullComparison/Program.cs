@@ -8,7 +8,7 @@ public class NullComparison
     [Benchmark]
     public bool IsNullTrue()
     {
-        Person person = null;
+        Person? person = null;
 
         return person is null;
     }
@@ -16,7 +16,7 @@ public class NullComparison
     [Benchmark]
     public bool IsNullFalse()
     {
-        Person person = null;
+        Person? person = null;
 
         return person is not null;
     }
@@ -24,7 +24,7 @@ public class NullComparison
     [Benchmark]
     public bool NullEqualsTrue()
     {
-        Person person = null;
+        Person? person = null;
 
         return person == null;
     }
@@ -32,7 +32,7 @@ public class NullComparison
     [Benchmark]
     public bool NullEqualsFalse()
     {
-        Person person = null;
+        Person? person = null;
 
         return person != null;
     }
@@ -40,7 +40,7 @@ public class NullComparison
     [Benchmark]
     public bool NullReferenceEqualsTrue()
     {
-        Person person = null;
+        Person? person = null;
 
         return ReferenceEquals(null, person);
     }
@@ -48,7 +48,7 @@ public class NullComparison
     [Benchmark]
     public bool NullReferenceEqualsFalse()
     {
-        Person person = null;
+        Person? person = null;
 
         return ReferenceEquals(person, null);
     }
@@ -56,8 +56,13 @@ public class NullComparison
 
 public class Person
 {
-    public string? Forename { get; init; }
-    public string? Surname { get; init; }
+    public Person(string? forename, string? surname)
+    {
+        Forename = forename;
+        Surname = surname;
+    }
+    public string? Forename { get; }
+    public string? Surname { get; }
 
     protected bool Equals(Person other)
     {
@@ -68,7 +73,7 @@ public class Person
     {
         if (ReferenceEquals(null, obj)) return false;
         if (ReferenceEquals(this, obj)) return true;
-        if (obj.GetType() != this.GetType()) return false;
+        if (obj.GetType() != GetType()) return false;
         return Equals((Person)obj);
     }
 
