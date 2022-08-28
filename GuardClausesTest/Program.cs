@@ -1,16 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using Ardalis.GuardClauses;
+﻿using Ardalis.GuardClauses;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 using Dawn;
 using EnsureThat;
 
-
 BenchmarkRunner.Run<GuardTests>();
 
 
-[MemoryDiagnoser()]
+[MemoryDiagnoser]
 public class GuardTests
 {
     private const string ValueToGuardAgainst = "HelloWorld";
@@ -46,4 +43,12 @@ public class GuardTests
         GuardNet.Guard.NotNullOrWhitespace(ValueToGuardAgainst, nameof(ValueToGuardAgainst));
         return ValueToGuardAgainst;
     }
+
+    [Benchmark]
+    public string MicrosoftCommunityToolKit()
+    {
+        CommunityToolkit.Diagnostics.Guard.IsNotNullOrWhiteSpace(ValueToGuardAgainst, nameof(ValueToGuardAgainst));
+        return ValueToGuardAgainst;
+    }
+
 }
